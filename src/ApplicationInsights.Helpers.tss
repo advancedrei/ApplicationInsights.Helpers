@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>E:\GitHub\ApplicationInsights.Helpers\src\Mvc5\InsightsHandleErrorAttribute.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\GitHub\ApplicationInsights.Helpers\src\WebApi2\InsightsExceptionLogger.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\GitHub\ApplicationInsights.Helpers\src\Mvc5\HtmlHelperExtensions.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>
