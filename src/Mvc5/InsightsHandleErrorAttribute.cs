@@ -6,8 +6,12 @@ namespace ApplicationInsights.Helpers.Mvc5
 {
 
     /// <summary>
-    /// 
+    /// Application Insights Exception Logger for MVC 5.3.
     /// </summary>
+    /// <remarks>
+    /// Code based on Microsoft recommendations from http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/12/application-insights-exception-telemetry.aspx.
+    /// It has been updated for DI support.
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
     public class InsightsHandleErrorAttribute : HandleErrorAttribute
     {
@@ -15,7 +19,7 @@ namespace ApplicationInsights.Helpers.Mvc5
         #region Properties
 
         /// <summary>
-        /// 
+        /// The instance of the <see cref="TelemetryClient"/> to use for the logger.
         /// </summary>
         public TelemetryClient Telemetry { get; private set; }
 
@@ -24,9 +28,13 @@ namespace ApplicationInsights.Helpers.Mvc5
         #region Constructor
 
         /// <summary>
-        /// 
+        /// The default constructor for the <see cref="InsightsHandleErrorAttribute"/>.
         /// </summary>
-        /// <param name="client"></param>
+        /// <param name="client">The <see cref="TelemetryClient"/> instance to use for the logger. Either injected by a DI framework or inctanciated manually.</param>
+        /// <example>
+        /// //
+        /// config.Services.Add(typeof(IExceptionLogger), new InsightsExceptionLogger(new TelemetryClient())); 
+        /// </example>
         public InsightsHandleErrorAttribute(TelemetryClient client)
         {
             if (client == null)
