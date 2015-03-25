@@ -16,31 +16,34 @@ I wanted to make it easier to use Application Insights, and this does just that.
 
 All versions:
 
-1) Add the following line to your appSettings in web.config, or to your Azure Web App appSettings:
+1) In the Application Insights installer in Visual Studio has not done so already, add the following line to your appSettings in web.config, or to your Azure Web App appSettings:
 ```csharp
 <add key="APPINSIGHTS_INSTRUMENTATIONKEY" value="**InsertYourInstrumentationGuidHere**"/>
 ```
 
-MVC:
+*MVC:*
+2) Install the NuGet package: `Install-Package ApplicationInsights.Helpers.Mvc5 -pre`.
 
-2) Add the following code to DependencyConfig.cs:
+3) Add the following code to DependencyConfig.cs:
 ```csharp
 builder.RegisterType<TelemetryClient>().SingleInstance();
 builder.Register(c => new InsightsHandleErrorAttribute(c.Resolve<TelemetryClient>())).AsExceptionFilterFor<Controller>().InstancePerRequest();
 builder.RegisterFilterProvider();
 ```
-3) Add the following code to the first line of either Register() in Startup.cs, or Application_Start() in Global.asax.cs:
+4) Add the following code to the first line of either Register() in Startup.cs, or Application_Start() in Global.asax.cs:
 ```csharp
 TelemetryConfiguration.Active.ContextInitializers.Add(new InsightsTelemetryInitializer());
 ```
-4) Add the following to the first line of the <head> tag in Shared/_Layout.cshtml:
+5) Add the following to the first line of the <head> tag in Shared/_Layout.cshtml:
 ```csharp
 @Html.AddApplicationInsightsHeader()
 ```
 
-WebApi:
+*WebApi:*
 
-2) Add the following code to the first line of Register() in WebApiConfig.cs:
+2) Install the NuGet package: `Install-Package ApplicationInsights.Helpers.WebApi2 -pre`.
+
+3) Add the following code to the first line of Register() in WebApiConfig.cs:
 ```csharp
 TelemetryConfiguration.Active.ContextInitializers.Add(new InsightsTelemetryInitializer());
 config.Services.Add(typeof(IExceptionLogger), new InsightsExceptionLogger(new TelemetryClient())); 
@@ -48,3 +51,6 @@ config.Services.Add(typeof(IExceptionLogger), new InsightsExceptionLogger(new Te
 NOTE: Not sure how to register the dependency in Autofac and then resolve the instance outside of constructor injection, so if you have a better way to do this and make the TelemetryClient instance available to the whole app, I'm all ears.
 
 That's it! Now you can have slot-specific InstrumentationKeys, all of your exceptions are captured, TelemetryClient instances are used, and life is grand.
+
+# Questions?
+Tweet me at @robertmclaws.
