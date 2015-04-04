@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc5", "Mvc5\Mvc5.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi2", "WebApi2\WebApi2.csproj", "{3DA3660B-5728-41AB-9702-AE72C4338DC3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{95288ABE-DE47-4EF1-9929-6FA58C76E048}"
+	ProjectSection(SolutionItems) = preProject
+		..\ApplicationInsights.Helpers.Mvc5.nuspec = ..\ApplicationInsights.Helpers.Mvc5.nuspec
+		..\ApplicationInsights.Helpers.WebApi2.nuspec = ..\ApplicationInsights.Helpers.WebApi2.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

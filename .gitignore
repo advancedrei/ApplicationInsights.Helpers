@@ -231,4 +231,4 @@ $RECYCLE.BIN/
 *.lnk
 *.tss
 *.tss
-src/ApplicationInsights.Helpers.tss
+src/*.tss

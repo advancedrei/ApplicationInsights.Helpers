@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata minClientVersion="2.8.1">
         <id>ApplicationInsights.Helpers.Mvc5</id>
-        <version>1.0.0-Beta1</version>
+        <version>1.0.2-Beta1</version>
         <title>Application Insights Helpers for Mvc5</title>
         <authors>Robert McLaws</authors>
         <owners>AdvancedREI</owners>

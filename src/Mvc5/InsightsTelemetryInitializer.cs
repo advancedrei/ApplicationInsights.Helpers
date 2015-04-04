@@ -26,7 +26,7 @@ namespace ApplicationInsights.Helpers
         /// The default constructor for the InsightsTelemetryInitializer.
         /// </summary>
         /// <param name="version">The current version of the app to pass to AI.</param>
-        public InsightsTelemetryInitializer(string version = null)
+        public InsightsTelemetryInitializer(string version = "")
         {
             _version = version;
         }
@@ -42,10 +42,9 @@ namespace ApplicationInsights.Helpers
         public void Initialize(TelemetryContext context)
         {
             context.InstrumentationKey = WebConfigurationManager.AppSettings["APPINSIGHTS_INSTRUMENTATIONKEY"];
-            if (!string.IsNullOrWhiteSpace(_version))
+            if (!string.IsNullOrWhiteSpace(_version.Trim()))
             {
-                context.Properties["AppVersion"] = _version;
-
+                context.Component.Version = _version;
             }
         }
 
