@@ -22,9 +22,9 @@
     </dependencies>
   </metadata>
   <files>
-      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Console.dll" target="lib\net452\" />
-      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Console.pdb" target="lib\net452\" />
-      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Console.xml" target="lib\net452\" />
-      <file src="src\Mvc5\**\*.cs" exclude="**\obj\**\*.*" target="src" />
+      <file src="src\Console\bin\Release\ApplicationInsights.Helpers.Console.dll" target="lib\net452\" />
+      <file src="src\Console\bin\Release\ApplicationInsights.Helpers.Console.pdb" target="lib\net452\" />
+      <file src="src\Console\bin\Release\ApplicationInsights.Helpers.Console.xml" target="lib\net452\" />
+      <file src="src\Console\**\*.cs" exclude="**\obj\**\*.*" target="src" />
   </files>
 </package>

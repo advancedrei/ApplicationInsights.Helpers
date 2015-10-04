@@ -8,7 +8,7 @@ namespace ApplicationInsights.Helpers.Console
 {
 
     /// <summary>
-    /// 
+    /// Initializes the <see cref="TelemetryContext"/> with information from the executing OS.
     /// </summary>
     /// <remarks>
     /// Re-worked from https://github.com/bc3tech/DesktopApplicationInsights
@@ -22,6 +22,11 @@ namespace ApplicationInsights.Helpers.Console
 
         #endregion
 
+        /// <summary>
+        /// Creates a new instance of the ConsoleContextInitializer.
+        /// </summary>
+        /// <param name="sourceAssembly">The assembly to grab version information from. In most cases, should be <see cref="Assembly.GetCallingAssembly"/>.</param>
+        /// <remarks>Because this Initializer requires you to pass in an Assembly instance, you cannot put this in your applicationInsights.config file.</remarks>
         public ConsoleContextInitializer(Assembly sourceAssembly)
         {
             _sourceAssembly = sourceAssembly;

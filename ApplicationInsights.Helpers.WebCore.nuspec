@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>ApplicationInsights.Helpers.WebCore</id>
+    <version>1.2.0-Beta1</version>
+    <title>Application Insights Helpers WebCore</title>
+    <authors>Robert McLaws</authors>
+    <owners>AdvancedREI</owners>
+    <licenseUrl>http://choosealicense.com/licenses/mit/</licenseUrl>
+    <projectUrl>http://github.com/AdvancedREI/ApplicationInsights.Helpers</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Core functionality used by the ApplicationInsights.Helpers.Mvc5 and ApplicationInsights.Helpers.WebApi2 packages.</description>
+    <releaseNotes>1.1.0-Beta1
+  • The InsightsTelemetryInitializer is now the KeyAndVersionContextInitializer and has been moved to the WebCore package. Name change was needed based on SDK naming conventions.
+  
+1.0.0-Beta1
+  • First release.
+    </releaseNotes>
+    <copyright>Copyright © 2015 AdvancedREI, LLC.</copyright>
+    <tags>Application Insights, MVC</tags>
+    <dependencies>
+      <group targetFramework="net452">
+        <dependency id="Microsoft.ApplicationInsights" version="1.2.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework=".NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.5.2" />
+      <frameworkAssembly assemblyName="System.Web.Extensions" targetFramework=".NETFramework4.5.2" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+      <file src="src\WebCore\bin\Release\ApplicationInsights.Helpers.WebCore.dll" target="lib\net452\" />
+      <file src="src\WebCore\bin\Release\ApplicationInsights.Helpers.WebCore.pdb" target="lib\net452\" />
+      <file src="src\WebCore\bin\Release\ApplicationInsights.Helpers.WebCore.xml" target="lib\net452\" />
+      <file src="src\WebCore\**\*.cs" exclude="**\obj\**\*.*" target="src" />
+  </files>
+</package>
