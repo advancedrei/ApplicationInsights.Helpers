@@ -1,31 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
-    <metadata minClientVersion="2.8.1">
-        <id>ApplicationInsights.Helpers.Mvc5</id>
-        <version>1.0.2-Beta1</version>
-        <title>Application Insights Helpers for Mvc5</title>
-        <authors>Robert McLaws</authors>
-        <owners>AdvancedREI</owners>
-        <licenseUrl>http://choosealicense.com/licenses/mit/</licenseUrl>
-        <projectUrl>http://github.com/AdvancedREI/ApplicationInsights.Helpers</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>A few utiltities to make implementing Application Insights in your app a tad easier.</description>
-        <releaseNotes>1.0.0-Beta1
-  • First release.
-        </releaseNotes>
-        <copyright>Copyright © 2015 AdvancedREI, LLC.</copyright>
-        <tags>Application Insights, MVC</tags>
-        <dependencies>
-          <group targetFramework="net452">
-            <dependency id="Microsoft.ApplicationInsights.Web" version="0.13.3-build03939" />
-            <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
-          </group>
-        </dependencies>
-    </metadata>
-    <files>
-        <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Mvc5.dll" target="lib\net452\" />
-        <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Mvc5.pdb" target="lib\net452\" />
-        <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Mvc5.xml" target="lib\net452\" />
-        <file src="src\Mvc5\**\*.cs" exclude="**\obj\**\*.*" target="src" />
-    </files>
+  <metadata minClientVersion="2.8.1">
+    <id>ApplicationInsights.Helpers.Mvc5</id>
+    <version>1.1.0-Beta4</version>
+    <title>Application Insights Helpers for Mvc5</title>
+    <authors>Robert McLaws</authors>
+    <owners>AdvancedREI</owners>
+    <licenseUrl>http://choosealicense.com/licenses/mit/</licenseUrl>
+    <projectUrl>http://github.com/AdvancedREI/ApplicationInsights.Helpers</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tools to make instrumenting MVC5 apps with Application Insights easier.</description>
+    <releaseNotes>1.1.0-Beta1
+  • The InsightsTelemetryInitializer is now the KeyAndVersionContextInitializer and has been moved to the WebCore package. Name change was needed based on SDK naming conventions.
+  
+1.0.0-Beta1
+• First release.
+    </releaseNotes>
+    <copyright>Copyright © 2015 AdvancedREI, LLC.</copyright>
+    <tags>Application Insights, MVC</tags>
+    <dependencies>
+      <group targetFramework="net452">
+        <dependency id="ApplicationInsights.Helpers.WebCore" version="1.2.0-Beta1" />
+        <dependency id="Microsoft.ApplicationInsights.Web" version="1.2.0" />
+        <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Mvc5.dll" target="lib\net452\" />
+      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Mvc5.pdb" target="lib\net452\" />
+      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Mvc5.xml" target="lib\net452\" />
+      <file src="src\Mvc5\**\*.cs" exclude="**\obj\**\*.*" target="src" />
+  </files>
 </package>

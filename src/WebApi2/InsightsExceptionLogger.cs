@@ -20,7 +20,7 @@ namespace ApplicationInsights.Helpers.WebApi2
         /// <summary>
         /// The instance of the <see cref="TelemetryClient"/> to use for the logger.
         /// </summary>
-        public TelemetryClient Telemetry { get; private set; }
+        public TelemetryClient Telemetry { get; }
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace ApplicationInsights.Helpers.WebApi2
         {
             if (client == null)
             {
-                throw new ArgumentNullException("client", "The TelemetryClient was not specified. Either register an instance with your DI container" +
+                throw new ArgumentNullException(nameof(client), "The TelemetryClient was not specified. Either register an instance with your DI container" +
                                                           " or pass an instance in manually.");
             }
             Telemetry = client;
@@ -57,7 +57,7 @@ namespace ApplicationInsights.Helpers.WebApi2
         /// <param name="context">The exception logger context.</param>
         public override void Log(ExceptionLoggerContext context)
         {
-            if (context != null && context.Exception != null)
+            if (context != null && context.Exception != null && Telemetry != null)
             {
                 Telemetry.TrackException(context.Exception);
             }

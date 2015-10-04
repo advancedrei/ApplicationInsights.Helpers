@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ApplicationInsights.Helpers.Mvc5")]
+[assembly: AssemblyTitle("ApplicationInsights.Helpers.Console")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ApplicationInsights.Helpers.Mvc5")]
+[assembly: AssemblyProduct("ApplicationInsights.Helpers.Console")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("71dcbd01-b256-41c8-a2c4-bc296f74f5b2")]
+[assembly: Guid("5c857eec-2d5c-4891-bea1-686b31f053f1")]
 
 // Version information for an assembly consists of the following four values:
 //

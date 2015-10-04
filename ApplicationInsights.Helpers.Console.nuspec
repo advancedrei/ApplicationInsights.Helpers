@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>ApplicationInsights.Helpers.Console</id>
+    <version>1.2.0-Beta1</version>
+    <title>Application Insights Helpers for Mvc5</title>
+    <authors>Robert McLaws</authors>
+    <owners>AdvancedREI</owners>
+    <licenseUrl>http://choosealicense.com/licenses/mit/</licenseUrl>
+    <projectUrl>http://github.com/AdvancedREI/ApplicationInsights.Helpers</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tools to make instrumenting Console apps with Application Insights easier.</description>
+    <releaseNotes>1.2.0-Beta1
+• First release.
+    </releaseNotes>
+    <copyright>Copyright © 2015 AdvancedREI, LLC.</copyright>
+    <tags>Application Insights, Console</tags>
+    <dependencies>
+      <group targetFramework="net452">
+        <dependency id="Microsoft.ApplicationInsights" version="1.2.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Console.dll" target="lib\net452\" />
+      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Console.pdb" target="lib\net452\" />
+      <file src="src\Mvc5\bin\Release\ApplicationInsights.Helpers.Console.xml" target="lib\net452\" />
+      <file src="src\Mvc5\**\*.cs" exclude="**\obj\**\*.*" target="src" />
+  </files>
+</package>

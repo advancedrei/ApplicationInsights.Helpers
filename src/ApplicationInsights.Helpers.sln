@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc5", "Mvc5\Mvc5.csproj", "{CB2B76A7-BB8E-42ED-8C01-94DEAB4C70E5}"
 EndProject
@@ -9,8 +9,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi2", "WebApi2\WebApi2.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{95288ABE-DE47-4EF1-9929-6FA58C76E048}"
 	ProjectSection(SolutionItems) = preProject
+		..\ApplicationInsights.Helpers.Console.nuspec = ..\ApplicationInsights.Helpers.Console.nuspec
 		..\ApplicationInsights.Helpers.Mvc5.nuspec = ..\ApplicationInsights.Helpers.Mvc5.nuspec
 		..\ApplicationInsights.Helpers.WebApi2.nuspec = ..\ApplicationInsights.Helpers.WebApi2.nuspec
+		..\ApplicationInsights.Helpers.WebCore.nuspec = ..\ApplicationInsights.Helpers.WebCore.nuspec
+		..\ApplicationInsights.Helpers.WebJobs.nuspec = ..\ApplicationInsights.Helpers.WebJobs.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCore", "WebCore\WebCore.csproj", "{0E7E9C2C-5459-4C73-B817-C54E992172EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{01D61339-C84E-4228-9424-7B9511BD5D91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{CC02F88B-4C11-4251-A965-3F33AD240434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{5C857EEC-2D5C-4891-BEA1-686B31F053F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobs", "WebJobs\WebJobs.csproj", "{96463D9F-2E8D-4ECF-8DED-04A35804426A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{BC689399-0225-4600-A7A2-E7C24AE90196}"
+	ProjectSection(SolutionItems) = preProject
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
 	EndProjectSection
 EndProject
 Global
@@ -27,8 +45,27 @@ Global
 		{3DA3660B-5728-41AB-9702-AE72C4338DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA3660B-5728-41AB-9702-AE72C4338DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA3660B-5728-41AB-9702-AE72C4338DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7E9C2C-5459-4C73-B817-C54E992172EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7E9C2C-5459-4C73-B817-C54E992172EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7E9C2C-5459-4C73-B817-C54E992172EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7E9C2C-5459-4C73-B817-C54E992172EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C857EEC-2D5C-4891-BEA1-686B31F053F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C857EEC-2D5C-4891-BEA1-686B31F053F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C857EEC-2D5C-4891-BEA1-686B31F053F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C857EEC-2D5C-4891-BEA1-686B31F053F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96463D9F-2E8D-4ECF-8DED-04A35804426A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96463D9F-2E8D-4ECF-8DED-04A35804426A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96463D9F-2E8D-4ECF-8DED-04A35804426A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96463D9F-2E8D-4ECF-8DED-04A35804426A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CB2B76A7-BB8E-42ED-8C01-94DEAB4C70E5} = {01D61339-C84E-4228-9424-7B9511BD5D91}
+		{3DA3660B-5728-41AB-9702-AE72C4338DC3} = {01D61339-C84E-4228-9424-7B9511BD5D91}
+		{0E7E9C2C-5459-4C73-B817-C54E992172EE} = {01D61339-C84E-4228-9424-7B9511BD5D91}
+		{5C857EEC-2D5C-4891-BEA1-686B31F053F1} = {01D61339-C84E-4228-9424-7B9511BD5D91}
+		{96463D9F-2E8D-4ECF-8DED-04A35804426A} = {01D61339-C84E-4228-9424-7B9511BD5D91}
 	EndGlobalSection
 EndGlobal

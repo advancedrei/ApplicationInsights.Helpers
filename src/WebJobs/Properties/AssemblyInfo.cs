@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ApplicationInsights.Helpers.Mvc5")]
+[assembly: AssemblyTitle("ApplicationInsights.Helpers.WebJobs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ApplicationInsights.Helpers.Mvc5")]
+[assembly: AssemblyProduct("ApplicationInsights.Helpers.WebJobs")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -18,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("71dcbd01-b256-41c8-a2c4-bc296f74f5b2")]
+[assembly: Guid("96463d9f-2e8d-4ecf-8ded-04a35804426a")]
 
 // Version information for an assembly consists of the following four values:
 //
