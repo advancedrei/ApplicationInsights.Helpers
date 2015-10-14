@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata minClientVersion="2.8.1">
     <id>ApplicationInsights.Helpers.Mvc5</id>
-    <version>1.2.0-Beta1</version>
+    <version>1.2.0-Beta2</version>
     <title>Application Insights Helpers for Mvc5</title>
     <authors>Robert McLaws</authors>
     <owners>AdvancedREI</owners>
@@ -20,8 +20,8 @@
     <tags>Application Insights, MVC</tags>
     <dependencies>
       <group targetFramework="net452">
-        <dependency id="ApplicationInsights.Helpers.WebCore" version="1.2.0-Beta1" />
-        <dependency id="Microsoft.ApplicationInsights.Web" version="1.2.0" />
+        <dependency id="ApplicationInsights.Helpers.WebCore" version="1.2.0-Beta2" />
+        <dependency id="Microsoft.ApplicationInsights.Web" version="2.0.0-beta1" />
         <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
       </group>
     </dependencies>

@@ -40,6 +40,15 @@ namespace ApplicationInsights.Helpers.Console
 
         }
 
+        /// <summary>
+        /// Changes the SessionId so that a new session can be tracked. Useful 
+        /// </summary>
+        /// <param name="client"></param>
+        public static void StartNewSession(this TelemetryClient client)
+        {
+            client.Context.Session.Id = Guid.NewGuid().ToString();
+        }
+
     }
 
 }

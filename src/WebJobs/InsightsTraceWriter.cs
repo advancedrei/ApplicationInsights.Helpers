@@ -70,7 +70,8 @@ namespace ApplicationInsights.Helpers.WebJobs
         /// <param name="ex"></param>
         public override void Trace(TraceLevel level, string source, string message, Exception ex)
         {
-
+            if (string.IsNullOrWhiteSpace(message) && ex == null) return;
+            
             if (!string.IsNullOrWhiteSpace(source))
             {
                 message = "[" + source + "] " + message;
